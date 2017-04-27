@@ -1,0 +1,18 @@
+class Song
+{
+	String ttile,artist,album,composer;
+	int year,track_num;
+	
+}
+
+
+
+
+
+class Song 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

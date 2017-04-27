@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Game369
+{
+	public static void main(String args[]){
+		System.out.print("1~99사이의 정수를 입력해주세요>>");
+		Scanner scan=new Scanner(System.in);
+		int number=scan.nextInt();
+
+		int fnumber=number/10;
+		int tnumber=number%10;
+
+		if(fnumber==3 || fnumber==6 || fnumber==9)
+			System.out.print("짝");
+		if(tnumber==3 || tnumber==6 || tnumber==9)
+			System.out.print("짝");
+
+	}
+}
