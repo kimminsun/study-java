@@ -1,0 +1,50 @@
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.*;
+import java.awt.*;
+public class j1101_4 extends JFrame{
+	JLabel jl1,jl2,jl3,jl4;
+	JTextField jtf1,jtf2,jtf3,jtf4;
+	GridLayout gl;
+	
+	
+	j1101_4(){
+		gl=new GridLayout(4,2);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Container cp=getContentPane();
+		
+		jl1=new JLabel("이름");
+		jl2=new JLabel("학번");
+		jl3=new JLabel("학과");
+		jl4=new JLabel("과목");
+		
+		jtf1=new JTextField();
+		jtf2=new JTextField();
+		jtf3=new JTextField();
+		jtf4=new JTextField();
+		
+		
+		cp.add(jl1);
+		cp.add(jtf1);
+		cp.add(jl2);
+		cp.add(jtf2);
+		cp.add(jl3);
+		cp.add(jtf3);
+		cp.add(jl4);
+		cp.add(jtf4);
+		
+		this.setSize(500, 600);
+		this.setVisible(true);
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new j1101_4();
+
+	}
+
+}

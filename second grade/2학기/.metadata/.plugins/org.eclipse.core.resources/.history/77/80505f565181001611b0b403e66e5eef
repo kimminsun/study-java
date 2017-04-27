@@ -1,0 +1,34 @@
+import java.awt.*;
+import java.awt.event.*;
+public class j0923_4 extends Frame implements ActionListener{
+	TextArea ta;
+	Checkbox cb1, cb2, cb3, cb4;
+	Panel p;
+	GridLayout gl;
+	
+	j0923_4() {
+		ta = new TextArea();
+		cb1 = new Checkbox("°³");
+		cb2 = new Checkbox("¼Ò");
+		cb3 = new Checkbox("¸»");
+		cb4 = new Checkbox("µÅÁö");
+		p = new Panel();
+		gl = new GridLayout(2,1);
+		
+		p.add(cb1);
+		p.add(cb2);
+		p.add(cb3);
+		p.add(cb4);
+		
+		this.setLayout(gl);
+		this.add(p);
+		this.add(ta);
+		this.setSize(300, 400);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new j0923_4();
+	}
+
+}

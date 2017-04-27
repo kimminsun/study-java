@@ -1,0 +1,41 @@
+package j161111;
+
+import java.awt.Container;
+import java.awt.TextField;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class j1111_2 extends JFrame{
+	JLabel j1,j2,j3,j4;
+	JTextField jtf1,jtf2,jtf3;
+	j1111_2(){
+		
+		
+		j1=new JLabel("이름 : ");
+		j2=new JLabel("학과 : ");
+		j3=new JLabel("주소 : ");
+		
+		jtf1=new JTextField();
+		jtf2=new JTextField();
+		jtf3=new JTextField();
+		
+		
+		Container cp=getContentPane();setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		cp.add(j1);
+		cp.add(jtf1);
+		
+		this.setSize(500,400);
+		this.setVisible(true);
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+}

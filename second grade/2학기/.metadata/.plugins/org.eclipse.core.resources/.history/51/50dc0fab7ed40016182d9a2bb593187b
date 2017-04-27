@@ -1,0 +1,365 @@
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.*;
+
+
+
+
+public class machine extends JFrame implements ActionListener{
+	JButton jbt1,jbt2,jbt3,jbt4,jbt5,jbt6,jbt7,jbt8,jbt9,jbt10,jbt11,jbt12; //앨범커버버튼
+	JButton submit; //버튼
+	JTextField jtf1;//돈투입구
+	ImageIcon icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon10,icon11,icon12;//앨범사진
+	Container cp;
+	JLabel title,album,result;
+	
+	JLabel first;
+	JLabel been,seo,justhis,hawji;
+	JScrollPane scrollPane;
+	ImageIcon back;
+
+	
+	static int change=0; 
+	
+	 
+	machine(){
+		super("민또니의 힙합 자판기");
+		
+		
+		/*back=new ImageIcon("D://2학기/VendingMachine/img/back.jpg");
+		FlowLayout fl=new FlowLayout();
+		
+		JPanel background=new JPanel(){
+			public void paintComponent(Graphics g){
+				g.drawImage(back.getImage(),0,0,null);
+				setOpaque(false);
+				super.paintComponent(g);
+			}
+		};*/
+
+
+		icon1=new ImageIcon("img/beenzino.jpg");
+		icon2=new ImageIcon("img/seosamuel.jpg");
+		icon3=new ImageIcon("img/justhis.jpg");
+		icon4=new ImageIcon("img/hawji.jpg");
+		icon5=new ImageIcon("img/paloalto.jpg");
+		icon6=new ImageIcon("img/donmils.jpg");
+		icon7=new ImageIcon("img/nucksal.jpg");
+		icon8=new ImageIcon("img/crush.jpg");
+		icon9=new ImageIcon("img/esens.jpg");
+		icon10=new ImageIcon("img/crucial.jpg");
+		icon11=new ImageIcon("img/qwala.jpg");
+		icon12=new ImageIcon("img/fana.jpg");
+		jbt1=new JButton("",icon1);
+		jbt2=new JButton("",icon2);
+		jbt3=new JButton("",icon3);
+		jbt4=new JButton("",icon4);
+		
+		jbt5=new JButton("",icon5);
+		jbt6=new JButton("",icon6);
+		jbt7=new JButton("",icon7);
+		jbt8=new JButton("",icon8);
+		jbt9=new JButton("",icon9);
+		jbt10=new JButton("",icon10);
+		jbt11=new JButton("",icon11);
+		jbt12=new JButton("",icon12);
+		
+		jbt1.addActionListener(this);
+		jbt2.addActionListener(this);
+		jbt3.addActionListener(this);
+		jbt4.addActionListener(this);
+		jbt5.addActionListener(this);
+		jbt6.addActionListener(this);
+		jbt7.addActionListener(this);
+		jbt8.addActionListener(this);
+		jbt9.addActionListener(this);
+		jbt10.addActionListener(this);
+		jbt11.addActionListener(this);
+		jbt12.addActionListener(this);
+		
+			
+		jtf1=new JTextField(15);
+		submit=new JButton("돈 투입");
+		album=new JLabel("");
+		result=new JLabel("");
+		
+		jtf1.addActionListener(this);
+		submit.addActionListener(this);
+		
+		been=new JLabel("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　");
+		seo=new JLabel("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　");
+		justhis=new JLabel("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　");
+		
+		
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		cp=getContentPane();
+	
+		
+		cp.add(jbt1);
+		cp.add(jbt2);
+		cp.add(jbt3);
+		cp.add(jbt4);
+		cp.add(been);
+		cp.add(jbt5);
+
+		cp.add(jbt6);
+		cp.add(jbt7);
+		cp.add(jbt8);
+		cp.add(seo);
+		cp.add(jbt9);
+		cp.add(jbt10);
+		cp.add(jbt11);
+		cp.add(jbt12);
+		cp.add(justhis);
+
+		cp.add(jtf1);
+		cp.add(submit);
+		cp.add(album);
+		cp.add(result);
+		
+		
+		/*background.add(jbt1);
+		background.add(jbt2);
+		background.add(jbt3);
+		background.add(jbt4);
+		background.add(jbt5);
+		background.add(jbt6);
+		background.add(jbt7);
+		
+        scrollPane = new JScrollPane(background);
+        setContentPane(scrollPane);*/
+        
+      //  super.setLayout(new FlowLayout()); 
+        
+        
+        
+       
+        
+        
+		/*
+		this.setSize(740, 650);
+		this.setResizable(false);
+		this.setVisible(true);*/
+	
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new machine();
+		
+		/*machine frame=new machine();		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.setSize(740,650);
+		frame.setVisible(true);*/
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		final int beenzino=12000;
+		final int samuel=12900;
+		final int justhis=12000;
+		final int hwaji=14200;
+		final int paloalto=11500;
+		final int donmils=12900;
+		final int nucksal=12900;
+		final int crush=11900;
+		final int esens=13400;
+		final int crucial=12900;
+		final int qwala=11500;
+		final int fana=11500;
+		//앨범 가격
+		
+		
+		
+		String s=jtf1.getText();
+		
+		if(e.getSource()==submit){
+			int money=Integer.parseInt(s);
+			result.setText(money+"원이 투입되었습니다");
+			change=money;
+			
+			
+		}
+		
+		if(e.getSource()==jbt1){
+			if(change>beenzino){
+				
+				change=change-beenzino;
+				album.setText(" "+change);
+				result.setText("빈지노 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+			
+		}
+		else if(e.getSource()==jbt2){
+			
+			if(change>samuel){
+			
+				change=change-samuel;
+				album.setText(" "+change);
+				result.setText("서사무엘 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt3){
+			
+			if(change>justhis){
+				change=change-justhis;
+				album.setText(" "+change);
+				result.setText("저스디스 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt4){
+			if(change>hwaji){
+				change=change-hwaji;
+				album.setText(" "+change);
+				result.setText("화지 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt5){
+			if(change>paloalto){
+				change=change-paloalto;
+				album.setText(" "+change);
+				result.setText("팔로알토 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt6){
+			if(change>donmils){
+				change=change-donmils;
+				album.setText(" "+change);
+				result.setText("던밀스 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt7){
+			if(change>nucksal){
+				change=change-nucksal;
+				album.setText(" "+change);
+				result.setText("넉살 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt8){
+			if(change>crush){
+				change=change-crush;
+				album.setText(" "+change);
+				result.setText("크러쉬 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt9){
+			if(change>esens){
+				change=change-esens;
+				album.setText(" "+change);
+				result.setText("이센스 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt10){
+			if(change>crucial){
+				change=change-crucial;
+				album.setText(" "+change);
+				result.setText("크루셜스타 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt11){
+			if(change>qwala){
+				change=change-qwala;
+				album.setText(" "+change);
+				result.setText("콸라 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+		else if(e.getSource()==jbt12){
+			if(change>fana){
+				change=change-fana;
+				album.setText(" "+change);
+				result.setText("화나 앨범 한 장 구매하셨습니다!");
+			}
+			else
+			{
+				album.setText("돈을 넣어주세요");
+				jtf1.selectAll();
+				jtf1.requestFocus();
+			}
+		}
+	
+	}
+
+}
+
+
+

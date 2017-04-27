@@ -1,0 +1,97 @@
+package j161111;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class j1111_1 extends JFrame implements ActionListener {
+	JLabel j1,j2,j3,j4;
+	JButton jbt1,jbt2,jbt3,jbt4,jbt5,jbt6,jbt7,jbt8,jbt9;
+	Container cp1;
+	JPanel jp1,jp2,jp3,jp4;
+	GridLayout gl;
+	j1111_1(){
+		Container cp=getContentPane();
+		gl=new GridLayout(4,1);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jp1=new JPanel();
+		jp2=new JPanel();
+		jp3=new JPanel();
+		jp4=new JPanel();
+
+		
+		
+		j1=new JLabel("JOptionPane.showMessageDialog()예제");
+		j2=new JLabel("JOptionPane.showOptionDialog()예제");
+		j3=new JLabel("JOptionPane.showInputDialog()예제");
+		j4=new JLabel("JDialog 예제");
+		
+		jbt1=new JButton("질문");
+		jbt2=new JButton("정보");
+		jbt3=new JButton("경고");
+		jbt4=new JButton("에러");
+		jbt5=new JButton("기분");
+		
+		jbt6=new JButton("옵션다이얼로그");
+		
+		jbt7=new JButton("입력다이얼로그");
+		jbt8=new JButton("입력다이얼로그2");
+		
+		jbt9=new JButton("사용자 맞춤형");
+		
+	
+		jp1.add(j1);
+		jp1.add(jbt1);
+		jp1.add(jbt2);
+		jp1.add(jbt3);
+		jp1.add(jbt4);
+		jp1.add(jbt5);
+		
+		jp2.add(j2);
+		jp2.add(jbt6);
+	
+		jp3.add(j3);
+		jp3.add(jbt7);
+		jp3.add(jbt8);
+		
+		jp4.add(j4);
+		jp4.add(jbt9);
+		
+		cp.add(jp1);
+		cp.add(jp2);
+		cp.add(jp3);
+		cp.add(jp4);
+		
+		this.setLayout(gl);
+		this.setSize(700, 400);
+		this.setVisible(true);
+		
+		
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new j1111_1();
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==jbt1){
+			JOptionPane.showMessageDialog(this,"질문입니다","Question",JOptionPane.QUESTION_MESSAGE);
+		}
+	}
+
+}

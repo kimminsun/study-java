@@ -1,0 +1,27 @@
+import java.awt.*;
+public class j1101_3 extends Frame {
+	Panel p;
+	TextField tf1,tf2;
+	Label l;
+	j1101_3(){
+		p=new Panel();
+		tf1=new TextField();
+		tf2=new TextField();
+		l=new Label("-");
+		
+		p.add(tf1);
+		p.add(l);
+		p.add(tf2);
+		
+		this.add(p);
+		
+		this.setSize(200,100);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

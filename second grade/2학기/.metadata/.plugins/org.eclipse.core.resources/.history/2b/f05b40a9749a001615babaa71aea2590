@@ -1,0 +1,28 @@
+import java.awt.*;
+public class j1025_1 extends Frame{
+	Panel p;
+	Button b1;
+	Label l1;
+	j1025_1(){
+		GridLayout gl=new GridLayout(1,1);
+		p=new Panel();
+		b1=new Button("¹öÆ°");
+		l1=new Label(" ");
+		
+		p.add(b1);
+		p.add(l1);
+		
+		this.add(p);
+		this.setSize(400, 400);
+		this.setVisible(true);
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			new j1025_1();
+	}
+
+}

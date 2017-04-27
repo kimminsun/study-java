@@ -1,0 +1,91 @@
+
+public class album {
+	protected int beenzino=5;
+	protected int samuel=5;
+	protected int justhis=5;
+	protected int hwaji=5;
+	protected int paloalto=5;
+	protected int donmils=5;
+	protected int nucksal=5;
+	protected int crush=5;
+	protected int sens=5;
+	protected int crucial=5;
+	protected int qwala=5;
+	protected int fana=5;
+	
+	
+	public int getBeenzino() {
+		return beenzino;
+	}
+	public void setBeenzino(int beenzino) {
+		this.beenzino = beenzino;
+	}
+	public int getSamuel() {
+		return samuel;
+	}
+	public void setSamuel(int samuel) {
+		this.samuel = samuel;
+	}
+	public int getJusthis() {
+		return justhis;
+	}
+	public void setJusthis(int justhis) {
+		this.justhis = justhis;
+	}
+	public int getHwaji() {
+		return hwaji;
+	}
+	public void setHwaji(int hwaji) {
+		this.hwaji = hwaji;
+	}
+	public int getPaloalto() {
+		return paloalto;
+	}
+	public void setPaloalto(int paloalto) {
+		this.paloalto = paloalto;
+	}
+	public int getDonmils() {
+		return donmils;
+	}
+	public void setDonmils(int donmils) {
+		this.donmils = donmils;
+	}
+	public int getNucksal() {
+		return nucksal;
+	}
+	public void setNucksal(int nucksal) {
+		this.nucksal = nucksal;
+	}
+	public int getCrush() {
+		return crush;
+	}
+	public void setCrush(int crush) {
+		this.crush = crush;
+	}
+	public int getSens() {
+		return sens;
+	}
+	public void setSens(int sens) {
+		this.sens = sens;
+	}
+	public int getCrucial() {
+		return crucial;
+	}
+	public void setCrucial(int crucial) {
+		this.crucial = crucial;
+	}
+	public int getQwala() {
+		return qwala;
+	}
+	public void setQwala(int qwala) {
+		this.qwala = qwala;
+	}
+	public int getFana() {
+		return fana;
+	}
+	public void setFana(int fana) {
+		this.fana = fana;
+	}
+	
+	
+}

@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class j0923_3 extends Frame implements ActionListener {
+	Button b1;
+	TextArea ta1,ta2;
+	Panel p;
+	
+	j0923_3(){
+		setLayout(new BorderLayout());
+		p=new Panel();
+		
+		b1=new Button("»Æ¿Œ");
+		b1.addActionListener(this);
+		
+		ta1=new TextArea();
+		ta2=new TextArea();
+		
+		p.add(ta1, BorderLayout.NORTH);
+		p.add(b1,BorderLayout.CENTER);
+		p.add(ta2, BorderLayout.SOUTH);
+		
+		this.add(p);
+		
+		this.setSize(400, 400);
+		this.setVisible(true);
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new j0923_3();
+	}
+public void acttionPerforemd(ActionEvent e){
+		
+	}
+	
+
+}

@@ -1,0 +1,129 @@
+package work;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+public class memojang extends Frame{
+	MenuBar mb;
+	Menu m1,m2,m3,m4,m5;
+	MenuItem mf2,mf3,mf4,mf5,mf6,mf7,mf8;
+	MenuItem me1,me2,me3,me4,me5,me6,me7,me8,me9,me10,me11;
+	MenuItem mo1,mo2;
+	MenuItem mv1;
+	MenuItem mh1,mh2;
+	MenuShortcut ms1,ms2,ms3,ms4;//파일메뉴단축키
+
+	memojang(String s){
+		super(s);
+		mb=new MenuBar();//메뉴바만들기
+		
+		
+		ms1=new MenuShortcut(KeyEvent.VK_N,false);
+		ms2=new MenuShortcut(KeyEvent.VK_O,false);
+		ms3=new MenuShortcut(KeyEvent.VK_S,false);
+		ms4=new MenuShortcut(KeyEvent.VK_P,false);// 파일 메뉴 단축키
+		
+		m1=new Menu("파일(F)");
+		m2=new Menu("편집(E)");
+		m3=new Menu("서식(O)");
+		m4=new Menu("보기(V)");
+		m5=new Menu("도움말(H)");//상단메뉴만들기
+		
+		mf2=new MenuItem("새로만들기(N)",ms1);
+		mf3=new MenuItem("열기(O)...",ms2);
+		mf4=new MenuItem("저장(S)",ms3);
+		mf5=new MenuItem("다른 이름으로 저장(A)...");
+		mf6=new MenuItem("페이지설정(U)...");
+		mf7=new MenuItem("인쇄(P)...",ms4);
+		mf8=new MenuItem("끝내기(X)");//파일아이템
+		
+		me1=new MenuItem("실행취소(U)");
+		me1.disable();
+		me2=new MenuItem("잘라내기(T)");
+		me2.disable();
+		me3=new MenuItem("복사(C)");
+		me3.disable();
+		me4=new MenuItem("붙여넣기(P)");
+		me5=new MenuItem("삭제(L)");
+		me5.disable();
+		me6=new MenuItem("찾기(F)...");
+		me6.disable();
+		me7=new MenuItem("다음 찾기(N)");
+		me7.disable();
+		me8=new MenuItem("바꾸기(R)...");
+		me9=new MenuItem("이동(G)...");
+		me10=new MenuItem("모두선택(A)");
+		me11=new MenuItem("시간/날짜(D)"); //편집 아이템
+		
+		mo1=new MenuItem("자동 줄 바꿈(W)");
+		mo2=new MenuItem("글꼴(F)"); //서식아이템
+		
+		mv1=new MenuItem("상태 표시줄(S)");//보기 아이템
+		
+		mh1=new MenuItem("도움말 보기(H)");
+		mh2=new MenuItem("메모장 정보(A)");//도움말 아이템
+		
+		m1.add(mf2);
+		m1.add(mf3);
+		m1.add(mf4);
+		m1.add(mf5);
+		m1.addSeparator(); //경계선
+		m1.add(mf6);
+		m1.add(mf7);
+		m1.addSeparator();
+		m1.add(mf8); //파일에 아이템 붙이기
+		
+		
+		m2.add(me1);
+		m2.add(me2);
+		m2.add(me3);
+		m2.add(me4);
+		m2.add(me5);
+		m2.addSeparator();
+		m2.add(me6);
+		m2.add(me7);
+		m2.add(me8);
+		m2.add(me9);
+		m2.addSeparator();
+		m2.add(me10);
+		m2.add(me11); //편집에 아이템 붙이기
+		
+		
+		m3.add(mo1);
+		m3.add(mo2); //서식에 아이템 붙이기
+		
+		m4.add(mv1); //보기에 아이템 붙이기
+		
+		m5.add(mh1);
+		m5.addSeparator();
+		m5.add(mh2); //도움말에 아이템 붙이기
+		
+		
+		mb.add(m1);
+		mb.add(m2);
+		mb.add(m3);
+		mb.add(m4);
+		mb.add(m5); //메뉴바에 메뉴 붙여
+		 
+		setMenuBar(mb);
+		this.setSize(600, 400);
+		this.setVisible(true);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new memojang("메모장");
+	}
+
+}

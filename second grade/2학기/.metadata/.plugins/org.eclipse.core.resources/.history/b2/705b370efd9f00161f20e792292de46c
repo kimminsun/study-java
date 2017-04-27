@@ -1,0 +1,31 @@
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.*;
+public class j1101_5 extends JFrame{
+	JButton jbt1,jbt2,jbt3,jbt4;
+	Container cp;
+	GridLayout gl;
+	
+	j1101_5(){
+		gl=new GridLayout(4,1);
+		cp=getContentPane();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jbt1=new JButton("위치와 크기 정보");
+		jbt2=new JButton("모양정보");
+		jbt3=new JButton("작동하지 않는 버튼");
+		jbt4=new JButton("숨기기/보이기");
+		
+		cp.add(jbt1);	cp.add(jbt2);	cp.add(jbt3);	cp.add(jbt4);
+		this.setLayout(gl);
+		this.setSize(500, 600);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new j1101_5();
+
+	}
+
+}

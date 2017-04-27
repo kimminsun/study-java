@@ -1,0 +1,12 @@
+import java.awt.*;
+public class j0923_1 extends Frame {
+	j0923_1(){
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

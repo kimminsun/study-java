@@ -1,0 +1,65 @@
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+public class j1025_1 extends Frame implements MouseListener{
+	Panel p;
+	Button b1;
+	Label l1;
+	j1025_1(){
+		GridLayout gl=new GridLayout(1,1);
+		p=new Panel();
+		b1=new Button("¹öÆ°");
+		l1=new Label(" ");
+		
+		b1.addMouseListener(this);
+		
+		p.add(b1);
+		p.add(l1);
+		
+		this.add(p);
+		this.setSize(400, 400);
+		this.setVisible(true);
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			new j1025_1();
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==b1){
+			String count=String.valueOf(e.getClickCount());
+			l1.setText(count);
+		}
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

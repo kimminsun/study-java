@@ -1,0 +1,66 @@
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowListener;
+public class j1025_2 extends Frame implements MouseListener{
+	Panel p;
+	Label l;
+	
+	int r=(int)((Math.random()*256));
+	int g=(int)((Math.random()*256));
+	int b=(int)((Math.random()*256));
+	
+	Color c=new Color(r);
+	j1025_2(){
+		
+		p=new Panel();
+		l=new Label("À¯¶óÂ¯");
+		
+		p.addMouseListener(this);
+		
+		this.add(l,BorderLayout.NORTH);
+		this.add(p,BorderLayout.SOUTH);
+		
+		this.setVisible(true);
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new j1025_2();
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
